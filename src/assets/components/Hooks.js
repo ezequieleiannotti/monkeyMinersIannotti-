@@ -12,17 +12,15 @@ export default function Hooks() {
       setCuenta(cuenta - 1);
     }
   };
-  useEffect(() => {
-    console.log("me ejecuto");
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div>
       {cuenta == 0 ? <h1>Compranos un Equipo!</h1> : <Cuenta cuenta={cuenta} />}
 
-      <button onClick={handleClick} class="btn btn-success" name="comprar">
+      <button onClick={handleClick} className="btn btn-success" name="comprar">
         Comprar RIG
       </button>
-      <button onClick={handleClick} class="btn btn-danger" name="restar">
+      <button onClick={handleClick} className="btn btn-danger" name="restar">
         Restar RIG
       </button>
     </div>

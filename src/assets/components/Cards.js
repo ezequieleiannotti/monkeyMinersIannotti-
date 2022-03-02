@@ -6,13 +6,13 @@ function Cards() {
     <div className="container">
       <div className="row">
         <div className="col-md-4">
-          <Card></Card>
+          <Card />
         </div>
         <div className="col-md-4">
-          <Card></Card>
+          <Card />
         </div>
         <div className="col-md-4">
-          <Card></Card>
+          <Card />
         </div>
       </div>
     </div>

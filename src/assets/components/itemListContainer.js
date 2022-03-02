@@ -1,12 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class itemListContainer extends Component {
-  render() {
-    return (
-      <div className="item">
-        <h1>itemListContainer</h1>
-      </div>
-    );
-  }
-}
+const itemListContainer = ({ greeting }) => {
+  return <div>{greeting}</div>;
+};
+
 export default itemListContainer;

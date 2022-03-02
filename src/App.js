@@ -5,17 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Cards from "./assets/components/Cards";
 import Slide from "./assets/components/Slide";
-import CardWidget from "./assets/components//NavBar/CartWidget";
-import itemListContainer from "./assets/components/itemListContainer";
+import ItemListContainer from "./assets/components/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
-      <NavBar>
-        {" "}
-        <CardWidget />
-      </NavBar>
-      <itemListContainer />
+      <NavBar />
+      <ItemListContainer greeting="Bienvenidos" />
       <Cards />
       <Slide />
       <Footer />
