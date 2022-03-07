@@ -1,22 +1,22 @@
 import React from "react";
-import Card from "./Card";
+import Item from "./Item";
 
-function Cards() {
+const ItemList = () => {
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-4">
-          <Card />
+          <Item />
         </div>
         <div className="col-md-4">
-          <Card />
+          <Item />
         </div>
         <div className="col-md-4">
-          <Card />
+          <Item />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Cards;
+export default ItemList;

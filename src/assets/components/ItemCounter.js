@@ -1,15 +1,23 @@
 import { useState, useEffect } from "react";
 import Cuenta from "./Cuenta";
 
-export default function Hooks() {
+export default function ItemCounter() {
   const [cuenta, setCuenta] = useState(0);
-  //   const [restar, setRestar] = useState(0);
+  const [Rig] = useState(4);
+
   const handleClick = (e) => {
     const sumarCarrito = e.target.getAttribute("name");
     if (sumarCarrito == "comprar") {
-      setCuenta(cuenta + 1);
+      if (Rig > cuenta) setCuenta(cuenta + 1);
     } else {
+      alert("Sin stock");
+    }
+  };
+  const handleDrecrement = (e) => {
+    if (cuenta > 0) {
       setCuenta(cuenta - 1);
+    } else {
+      alert("Tenes que tener algo en el carrito");
     }
   };
   useEffect(() => {}, []);
@@ -18,10 +26,14 @@ export default function Hooks() {
       {cuenta == 0 ? <h1>Compranos un Equipo!</h1> : <Cuenta cuenta={cuenta} />}
 
       <button onClick={handleClick} className="btn btn-success" name="comprar">
-        Comprar RIG
+        +
       </button>
-      <button onClick={handleClick} className="btn btn-danger" name="restar">
-        Restar RIG
+      <button
+        onClick={handleDrecrement}
+        className="btn btn-danger"
+        name="restar"
+      >
+        -{" "}
       </button>
     </div>
   );

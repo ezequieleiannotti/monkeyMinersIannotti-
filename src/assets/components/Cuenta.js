@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Cuenta(props) {
-  let { cuenta } = props;
+  let { cuenta, stock } = props;
   return (
     <div>
       {cuenta > 1 ? (
