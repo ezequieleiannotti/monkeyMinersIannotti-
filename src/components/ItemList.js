@@ -6,13 +6,13 @@ const ItemList = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-4">
-          <Item />
+          <Item initial={1} stock={8} />
         </div>
         <div className="col-md-4">
-          <Item />
+          <Item initial={1} stock={4} />
         </div>
         <div className="col-md-4">
-          <Item />
+          <Item initial={1} stock={3} />
         </div>
       </div>
     </div>

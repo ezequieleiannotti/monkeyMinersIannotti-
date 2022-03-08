@@ -1,6 +1,6 @@
 import React from "react";
 
-import image from "../../statics/CartWidget.png";
+import image from "../../assets/statics/CartWidget.png";
 
 const CartWidget = () => {
   return (

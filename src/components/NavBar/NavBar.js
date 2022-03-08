@@ -1,9 +1,9 @@
 import React from "react";
 
-import logo from "../../statics/logom.jpg";
+import logo from "../../assets/statics/logom.jpg";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import CartWidget from "./CartWidget";
-import image from "../../statics/CartWidget.png";
+import image from "../../assets/statics/CartWidget.png";
 
 const Header = () => {
   return (

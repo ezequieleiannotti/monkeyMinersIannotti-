@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import Cuenta from "./Cuenta";
 
-export default function ItemCounter() {
-  const [cuenta, setCuenta] = useState(0);
-  const [Rig] = useState(4);
+export default function ItemCounter({ initial, stock }) {
+  const [cuenta, setCuenta] = useState(initial);
 
   const handleClick = (e) => {
     const sumarCarrito = e.target.getAttribute("name");
-    if (sumarCarrito == "comprar") {
-      if (Rig > cuenta) setCuenta(cuenta + 1);
+    if (sumarCarrito === "comprar") {
+      if (stock > cuenta) setCuenta(cuenta + 1);
     } else {
       alert("Sin stock");
     }
@@ -23,7 +22,11 @@ export default function ItemCounter() {
   useEffect(() => {}, []);
   return (
     <div>
-      {cuenta == 0 ? <h1>Compranos un Equipo!</h1> : <Cuenta cuenta={cuenta} />}
+      {cuenta === 0 ? (
+        <h1>Compranos un Equipo!</h1>
+      ) : (
+        <Cuenta cuenta={cuenta} />
+      )}
 
       <button onClick={handleClick} className="btn btn-success" name="comprar">
         +

@@ -1,8 +1,8 @@
 import React from "react";
-import imagen1 from "../statics/rig.jpg";
+import imagen1 from "../assets/statics/rig.jpg";
 import ItemCounter from "./ItemCounter";
 
-const Item = () => {
+const Item = ({ initial, stock }) => {
   return (
     <div className="card">
       <img src={imagen1} alt="" />
@@ -15,7 +15,7 @@ const Item = () => {
           recopilan las transacciones a medida que ocurren, las ordenan en
           bloques, agregan a la cadena y la validan
         </p>
-        <ItemCounter />
+        <ItemCounter initial={initial} stock={stock} />
       </div>
     </div>
   );
