@@ -1,11 +1,20 @@
 .App {
   text-align: center;
+  background-color: #F8F8FF;
 }
+.App .card {
+  display: table-cell;
+}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+body{
+  background-color: blue
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +45,4 @@
     transform: rotate(360deg);
   }
 }
+
