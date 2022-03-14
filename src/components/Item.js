@@ -1,24 +1,28 @@
 import React from "react";
-import imagen1 from "../assets/statics/rig.jpg";
+import img from "../assets/statics/rig.jpg";
 import ItemCounter from "./ItemCounter";
 
-const Item = ({ initial, stock }) => {
+function Item({ titulo, precio, ganancia, initial, stock }) {
   return (
-    <div className="card">
-      <img src={imagen1} alt="" />
-      <div className="card-body">
-        <h4 className="card-title">RIG</h4>
-        <p className="card-text text-secondary">
-          Los mineros de criptomonedas hacen este proceso con los rigs. Estos
-          equipos de minería realizan las transacciones a través de cálculos
-          matemáticos. Ellos son quienes ejecutan los nodos de la red, allí
-          recopilan las transacciones a medida que ocurren, las ordenan en
-          bloques, agregan a la cadena y la validan
-        </p>
-        <ItemCounter initial={initial} stock={stock} />
+    <div>
+      <div className="card">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="card-body">
+              <h4 className="card-title">Modelo del equipo {titulo}</h4>
+              {/* <img href={img} /> */}
+              <img src={img} alt="" />
+              <p className="card-text text-secondary">Precio:{precio}</p>
+              <p className="card-text text-secondary">
+                Ganancias estimadas mensual: {ganancia}
+              </p>
+            </div>
+            <ItemCounter initial={0} stock={8} />
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default Item;

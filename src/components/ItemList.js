@@ -1,22 +1,25 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = () => {
+function ItemList({ lista }) {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-4">
-          <Item initial={1} stock={8} />
+    <div>
+      {lista.map((item, index) => (
+        <div className="card">
+          <div className="row">
+            <div className="col-md-4">
+              <Item
+                key={index}
+                titulo={item.nombre}
+                precio={item.precio}
+                ganancia={item.ganancia}
+              />
+            </div>
+          </div>
         </div>
-        <div className="col-md-4">
-          <Item initial={1} stock={4} />
-        </div>
-        <div className="col-md-4">
-          <Item initial={1} stock={3} />
-        </div>
-      </div>
+      ))}
     </div>
   );
-};
+}
 
 export default ItemList;

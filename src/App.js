@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer greeting="Bienvenidos" />
-      <ItemList />
       <Slide />
       <Footer />
     </div>
