@@ -2,7 +2,7 @@ import React from "react";
 import img from "../assets/statics/rig.jpg";
 import ItemCounter from "./ItemCounter";
 
-function Item({ titulo, precio, ganancia, initial, stock }) {
+function Item({ titulo, precio, ganancia, stock, i }) {
   return (
     <div>
       <div className="card">
@@ -10,15 +10,15 @@ function Item({ titulo, precio, ganancia, initial, stock }) {
           <div className="col-md-12">
             <div className="card-body">
               <h4 className="card-title">Modelo del equipo {titulo}</h4>
-              {/* <img href={img} /> */}
               <img src={img} alt="" />
               <p className="card-text text-secondary">Precio:{precio}</p>
               <p className="card-text text-secondary">
                 Ganancias estimadas mensual: {ganancia}
               </p>
             </div>
-            <ItemCounter initial={0} stock={8} />
+            <ItemCounter key={i} initial={0} stock={8} />
           </div>
+          <div></div>
         </div>
       </div>
     </div>
