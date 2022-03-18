@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pokemon(name) {
+function Pokemon({ name }) {
   return (
     <div>
       <div className="bg-gree.300 p-4 text-center">

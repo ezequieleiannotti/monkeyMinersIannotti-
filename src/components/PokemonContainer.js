@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { getPokemons } from "../components/ConsumiendoPokeApi";
 import PokemonList from "./PokemonList";
 
 function PokemonContainer() {
   const [pokemons, setPokemons] = useState([]);
 
-  const obtenerPokemons = () => {
+  useEffect(() => {
     getPokemons()
       .then((resultado) => resultado.json())
       .then((pokemons) => {
-        console.log(pokemons.result);
-        setPokemons(pokemons.result);
+        console.log(pokemons.results);
+        setPokemons(pokemons.results);
       });
-  };
+  }, []);
+
   return (
     <div>
-      <button onClick={obtenerPokemons}>Ver pokemons</button>
-      <PokemonList lista1={pokemons} />
+      <PokemonList pokemon={pokemons} />
     </div>
   );
 }
